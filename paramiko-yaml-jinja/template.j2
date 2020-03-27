@@ -1,0 +1,21 @@
+{% for interface in interface_list %}
+interface {{ interface.int_name }}
+ no shutdown
+ ip address {{ interface.ip_address }}
+{% endfor %}
+
+router bgp {{ as_number }}
+bgp router-id {{ router_id }}
+{% for neigh in bgp_neighbor_list %}
+ neighbor {{ neigh.ip }} remote-as {{ neigh.as }}
+{% endfor %}
+{% for network in bgp_network %}
+ network {{ network }}
+{% endfor %}
+
+{% for dhcp in dhcp_list %}
+ip dhcp pool {{ dhcp.pool }}
+ network {{ dhcp.network }}
+ default-router {{ dhcp.default_router }}
+ dns-server {{ dhcp.dns_server }}
+{% endfor %}

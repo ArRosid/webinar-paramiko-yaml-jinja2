@@ -1,0 +1,25 @@
+- ip: 192.168.100.1
+  username: cisco
+  password: cisco
+  interface_list:
+    - int_name: fa0/1
+      ip_address: 10.12.12.1 255.255.255.0
+    - int_name: fa1/0
+      ip_address: 192.168.1.1 255.255.255.0
+    - int_name: loopback0
+      ip_address: 10.1.1.1 255.255.255.255
+
+- ip: 192.168.100.2
+  username: cisco
+  password: cisco
+  interface_list:
+    - int_name: fa0/1
+      ip_address: 10.12.12.2 255.255.255.0
+    - int_name: fa1/0
+      ip_address: 192.168.2.1 255.255.255.0
+    - int_name: loopback0
+      ip_address: 10.2.2.2 255.255.255.255
+    - int_name: lo100
+      ip_address: 10.100.1.1 255.255.255.255
+    - int_name: lo101
+      ip_address: 10.101.1.1 255.255.255.255

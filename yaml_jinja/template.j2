@@ -1,0 +1,5 @@
+{% for intf in interface_list %}
+interface {{ intf.int_name }}
+ no shutdown
+ ip address {{ intf.ip_address }}
+{% endfor %}

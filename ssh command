@@ -1,0 +1,6 @@
+username cisco priv 15 pass cisco
+ip domain-name idn.id
+crypto key gene rsa mod 1024
+line vty 0 15
+login local
+do wr
